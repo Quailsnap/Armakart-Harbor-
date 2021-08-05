@@ -39,15 +39,6 @@ No_item = true;
 // NAMETAGS
 [] execVM "Armakart_Main\Armakart_Whale's_Nametags\wha_nametags_init.sqf";
 
-WHA_NAMETAGS_TESTLOOP =
-[
-
-	{ { WHA_NAMETAGS_PLAYER reveal [_x,4] } forEach allUnits; },
-	10,
-	[]
-
-] call CBA_fnc_addPerFrameHandler;
-
 //Sets group name for spectator boys
 _Name = name player;
 [group player, [_Name]] remoteExec ["setGroupIdGlobal", 2];
